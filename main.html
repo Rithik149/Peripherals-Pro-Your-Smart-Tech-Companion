@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Specware</title>
+    <link rel="stylesheet" href="/assets/css/home.css" />
+    <script src="/config.js"></script>
+    <script src="/assets/js/main.js"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/img/logo.jpg" />
+  </head>
+  <body>
+    <header>
+      <div class="nav-container">
+        <img src="/assets/img/logo.jpg" id="logo" />
+        <h1>Specware</h1>
+        <a id="home">Home</a>
+        <a id="select" href="/select.html" target="_blank">Selection</a>
+        <button id="help">Help ?</button>
+      </div>
+    </header>
+
+    <main>
+      <div class="search-container">
+        <input class="input" type="text" placeholder="Search for products..." />
+        <svg viewBox="0 0 24 24" class="search__icon">
+          <g>
+            <path
+              d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"
+            ></path>
+          </g>
+        </svg>
+      </div>
+
+      <h2>All Products</h2>
+      <div class="device-grid">
+        <div class="device-card">
+          <img src="/assets/img/ram.jpg" alt="RAM" />
+          <h3>RAM</h3>
+          <button class="home-find" onclick="setUserNeed('ram')">FIND</button>
+        </div>
+
+        <div class="device-card">
+          <img src="/assets/img/keyboard.png" alt="KEYBOARD" />
+          <h3>KEYBOARD</h3>
+          <button class="home-find" onclick="setUserNeed('keyboard')">
+            FIND
+          </button>
+        </div>
+
+        <div class="device-card">
+          <img src="/assets/img/mouse.jpeg" alt="MOUSE" />
+          <h3>MOUSE</h3>
+          <button class="home-find" onclick="setUserNeed('mouse')">FIND</button>
+        </div>
+
+        <div class="device-card">
+          <img src="/assets/img/ssd.png" alt="SSD" />
+          <h3>SSD</h3>
+          <button class="home-find" onclick="setUserNeed('ssd')">FIND</button>
+        </div>
+
+        <div class="device-card">
+          <img src="/assets/img/usb_hub.jpg" alt="USB HUB" />
+          <h3>USB HUB</h3>
+          <button class="home-find" onclick="setUserNeed('usb_hub')">
+            FIND
+          </button>
+        </div>
+
+        <div class="device-card">
+          <img src="/assets/img/p_ssd.jpg" alt="Portable SSD" />
+          <h3>PORTABLE STORAGE</h3>
+          <button class="home-find" onclick="setUserNeed('portable_storage')">
+            FIND
+          </button>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

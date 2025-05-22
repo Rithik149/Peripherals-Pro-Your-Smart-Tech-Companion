@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self' https://openrouter.ai; connect-src https://openrouter.ai"
+    />
+    <title>Selection</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/img/logo.jpg" />
+    <link rel="stylesheet" href="/assets/css/select.css" />
+    <script src="/config.js"></script>
+    <script src="/assets/js/main.js"></script>
+
+    <!-- load JS after the DOM -->
+  </head>
+  <body>
+    <header>
+      <div class="nav-container">
+        <img src="/assets/img/logo.jpg" id="logo" />
+        <h1>Specware</h1>
+        <a id="home" href="/main.html" target="_blank">Home</a>
+        <a id="select">Selection</a>
+        <button id="help">Help ?</button>
+      </div>
+    </header>
+
+    <div class="select-container">
+      <h2>Refine Your Preferences</h2>
+      <form id="preferencesForm">
+        <!-- Add brand selection -->
+        <label for="brand">Laptop Brand</label>
+        <select name="brand" id="brand">
+          <option value="ASUS">ASUS</option>
+          <option value="HP">HP</option>
+          <option value="Dell">Dell</option>
+          <option value="Lenovo">Lenovo</option>
+          <option value="Acer">Acer</option>
+          <option value="MSI">MSI</option>
+        </select>
+
+        <label>Laptop model
+          <a href="help.html" class="help-icon" target="_blank" rel="noopener noreferrer">?</a>
+        </label>
+        <input
+          type="text"
+          name="Enter Laptop model"
+          id="modelno"
+          placeholder="Example: FA706IHRB"
+          required
+        />
+
+        <label for="products" id="dropdown">User Need</label>
+        <select name="needs" id="drop">
+          <option value="ram">RAM</option>
+          <option value="ssd">SSD</option>
+          <option value="mouse">MOUSE</option>
+          <option value="keyboard">KEYBOARD</option>
+          <option value="usb_hub">USB HUB</option>
+          <option value="portable_storage">PORTABLE STORAGE</option>
+        </select>
+
+        <label for="budget" id="dropdown">Budget (₹)</label>
+        <div class="budget-container">
+          <input type="number" id="rs" placeholder="Min" min="0" required />
+          <input type="number" id="rs1" placeholder="Max" min="0" required />
+        </div>
+
+        <label>Select quality</label>
+        <select name="q" id="quality">
+          <option value="high">High</option>
+          <option value="normal">Standard</option>
+        </select>
+
+        <button type="submit" id="submit">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>
