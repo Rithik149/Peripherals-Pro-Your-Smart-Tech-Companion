@@ -1,0 +1,312 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #84c9fc;
+  background-image: linear-gradient(180deg, #84c9fc 0%, #d8eefe 100%);
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navigation Bar */
+header {
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 1rem 2rem;
+}
+
+.nav-container {
+  height: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1 {
+  margin: 0;
+  font-size: 30px;
+  font-weight: 100;
+}
+
+#logo {
+  width: 2rem;
+  border-radius: 2rem;
+  margin-right: 0.8rem;
+}
+
+#home {
+  padding-left: 3rem;
+}
+
+#select {
+  padding-left: 1rem;
+}
+
+#help {
+  height: 2rem;
+  width: 7rem;
+  border: transparent;
+  color: white;
+  background-color: #626ae7;
+  border-radius: 10px;
+  margin-left: auto;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#help:hover {
+  background-color: #5a5ffe;
+}
+
+a {
+  text-decoration: none;
+  color: #2c3e50;
+  transition: color 0.3s;
+}
+
+#home:hover, #select:hover {
+  color: #626ae7;
+}
+
+/* Selection Container */
+.select-container {
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border:1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.select-container h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  font-weight: 200;
+  color: #2c3e50;
+}
+
+/* Form Styles */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  display: block;
+  margin-top: 1rem;
+  color: #2c3e50;
+  font-weight: 500;
+}
+
+input, select {
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  padding: 0.8rem 1rem;
+  width: 100%;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+input:focus, select:focus {
+  outline: none;
+  border-color: #626ae7;
+}
+
+#modelno {
+  margin-top: 0.5rem;
+}
+
+#drop, #quality {
+  margin-top: 0.5rem;
+}
+
+.budget-container {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+#rs, #rs1 {
+  width: 100%;
+  padding: 0.8rem 1rem;
+}
+
+#rs1 {
+  margin-left: 0;
+}
+
+#submit {
+  height: 2.5rem;
+  width: 100%;
+  border: none;
+  color: white;
+  background-color: #626ae7;
+  border-radius: 8px;
+  margin-top: 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#submit:hover {
+  background-color: #5a5ffe;
+}
+
+/* Error and Loading States */
+.error-message {
+  color: #e74c3c;
+  margin-top: 0.5rem;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+#loading-indicator {
+  text-align: center;
+  margin-top: 1rem;
+  font-style: italic;
+  color: #2c3e50;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav-container {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 0.5rem;
+    gap: 1rem;
+  }
+
+  #home {
+    padding-left: 1rem;
+  }
+
+  #select {
+    padding-left: 1rem;
+  }
+
+  #help {
+    margin-left: 0;
+    width: 100%;
+    order: 1;
+  }
+
+  .select-container {
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .select-container {
+    margin: 1rem;
+    padding: 1rem;
+  }
+
+  .budget-container {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  #rs, #rs1 {
+    width: 100%;
+  }
+}
+
+/* Brand selection styling */
+#brand {
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Model input styling */
+#modelno {
+  margin-bottom: 1rem;
+}
+
+/* Enhanced error message styling */
+.error-message {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem;
+  background-color: #fdeded;
+  border-radius: 8px;
+  margin-top: 1rem;
+  color: #e74c3c;
+  font-size: 0.9rem;
+}
+
+.error-message svg {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+/* Loading indicator styling */
+#loading-indicator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+  margin-top: 1rem;
+}
+
+.spinner {
+  width: 24px;
+  height: 24px;
+  border: 3px solid rgba(98, 106, 231, 0.3);
+  border-radius: 50%;
+  border-top-color: #626ae7;
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Input validation styling */
+input:invalid, select:invalid {
+  border-color: #e74c3c;
+}
+
+input:valid, select:valid {
+  border-color: #2ecc71;
+}
+/* Help icon styling */
+.help-icon {
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 50%;
+  background-color: #626ae7;
+  color: white;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: 0.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  line-height: 1;
+  transition: all 0.2s;
+}
+
+.help-icon:hover {
+  background-color: #5a5ffe;
+  transform: scale(1.1);
+}

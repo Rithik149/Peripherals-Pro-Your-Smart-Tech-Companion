@@ -1,0 +1,335 @@
+/* Header Styles */
+body{
+  background-color: #84c9fc;
+  background-image: linear-gradient(180deg, #84c9fc 0%, #d8eefe 100%);
+}
+header {
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 1rem 2rem;
+  border-radius: 0 0 12px 12px;
+  margin-bottom: 2rem;
+}
+
+.nav-container {
+  height: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1 {
+  margin: 0;
+  font-size: 30px;
+  font-weight: 100;
+}
+
+#logo {
+  width: 2rem;
+  border-radius: 2rem;
+  margin-right: 0.8rem;
+}
+
+#home {
+  padding-left: 3rem;
+}
+
+#select {
+  padding-left: 1rem;
+}
+
+#help {
+  height: 2rem;
+  width: 7rem;
+  border: transparent;
+  color: white;
+  background-color: #626ae7;
+  border-radius: 10px;
+  margin-left: auto;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#help:hover {
+  background-color: #5a5ffe;
+}
+
+a {
+  text-decoration: none;
+  color: #2c3e50;
+  transition: color 0.3s;
+}
+
+#home:hover, #select:hover {
+  color: #626ae7;
+}
+
+/* Main Content */
+.recommendation-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.recommendation-container h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-weight: 300;
+  font-size: 2rem;
+  color: #2c3e50;
+}
+
+/* Product Grid */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2rem;
+  padding: 1rem 0;
+}
+
+/* Product Card */
+.product-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.8rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.laptop-badge {
+  background: #626ae7;
+  color: white;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  position: absolute;
+  top: -10px;
+  right: 15px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.product-card h3 {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  line-height: 1.4;
+  padding-right: 2rem;
+}
+
+.product-card .price {
+  color: #27ae60;
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin: 0.5rem 0;
+}
+
+.product-card .reason {
+  color: #7f8c8d;
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+/* Product Actions */
+.product-actions {
+  display: grid;
+  gap: 0.8rem;
+  margin-top: auto;
+  padding-top: 1rem;
+}
+
+.product-actions.has-two-buttons {
+  grid-template-columns: 1fr 1fr;
+}
+
+.buy-button {
+  padding: 0.7rem;
+  border-radius: 8px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  transition: all 0.2s;
+  font-size: 0.9rem;
+  border: none;
+  cursor: pointer;
+}
+
+.amazon-button {
+  background: #FF9900;
+  color: #000;
+}
+
+.amazon-button:hover {
+  background: #e68a00;
+}
+
+.flipkart-button {
+  background: #047BD5;
+  color: white;
+}
+
+.flipkart-button:hover {
+  background: #0368b1;
+}
+
+.buy-button svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* Loading and Error States */
+.loading-state {
+  grid-column: 1/-1;
+  text-align: center;
+  padding: 3rem;
+}
+
+.error-message {
+  grid-column: 1/-1;
+  padding: 1.5rem;
+  background-color: #fdeded;
+  border: 1px solid #e74c3c;
+  border-radius: 12px;
+  color: #e74c3c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  text-align: center;
+}
+
+.error-message svg {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+}
+
+/* Spinner Animation */
+.spinner {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  border: 3px solid rgba(98, 106, 231, 0.3);
+  border-radius: 50%;
+  border-top-color: #626ae7;
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav-container {
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 0.5rem;
+  }
+
+  #help {
+    margin-left: 0;
+    width: 100%;
+    order: 1;
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .product-card {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+
+  .recommendation-container h2 {
+    font-size: 1.5rem;
+  }
+
+  .product-actions.has-two-buttons {
+    grid-template-columns: 1fr;
+  }
+}
+/* Add these to your existing final.css */
+
+/* Out of stock button styles */
+.out-of-stock-button {
+  background-color: #95a5a6;
+  color: white;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.out-of-stock-button:hover {
+  background-color: #7f8c8d;
+}
+
+/* No stock message */
+.no-stock-message {
+  color: #e74c3c;
+  font-size: 0.9rem;
+  padding: 0.5rem;
+  text-align: center;
+  background-color: #fdeded;
+  border-radius: 6px;
+  margin-top: 0.5rem;
+}
+
+/* Price styling */
+.price {
+  color: #27ae60;
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin: 0.5rem 0;
+}
+
+/* Error message styling */
+.error-message {
+  background-color: #fdeded;
+  border: 1px solid #e74c3c;
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.error-message svg {
+  flex-shrink: 0;
+}
+
+.retry-button {
+  background-color: #626ae7;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  margin-top: 0.8rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.retry-button:hover {
+  background-color:green
+}
